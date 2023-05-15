@@ -18,6 +18,14 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
 subprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
@@ -35,4 +43,20 @@ subprojects {
     tasks.named('test') {
         useJUnitPlatform()
     }
+
+    bootJar {
+        if (name == 'micro-service-cloud-eureka-7001') {
+            mainClassName = 'com.fan.eureka1.Application'
+        } else if (name == 'micro-service-cloud-eureka-7002') {
+            mainClassName = 'com.fan.eureka2.Application'
+        } else if (name == 'micro-service-cloud-eureka-7003') {
+            mainClassName = 'com.fan.eureka3.Application'
+        } else if (name == 'micro-service-cloud-department-provider'){
+            mainClassName = 'com.fan.provider.Application'
+        } else if (name == 'micro-service-cloud-api') {
+            mainClassName = 'com.fan.api.Application'
+        }
+    }
+
+
 }
