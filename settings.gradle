@@ -1,0 +1,5 @@
+rootProject.name = 'spring-cloud-demo'
+include 'micro-service-cloud-api'
+include 'micro-service-cloud-eureka'
+include 'micro-service-cloud-department-provider'
+
