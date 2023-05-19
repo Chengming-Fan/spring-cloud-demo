@@ -1,7 +1,10 @@
 rootProject.name = 'spring-cloud-demo'
 include 'micro-service-cloud-api'
 include 'micro-service-cloud-eureka-7001'
-include 'micro-service-cloud-department-provider'
+include 'micro-service-cloud-department-provider-8001'
+include 'micro-service-cloud-department-provider-8002'
+include 'micro-service-cloud-department-provider-8003'
 include 'micro-service-cloud-eureka-7002'
 include 'micro-service-cloud-eureka-7003'
+include 'micro-service-cloud-department-consumer'
 
