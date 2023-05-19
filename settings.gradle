@@ -7,4 +7,5 @@ include 'micro-service-cloud-department-provider-8003'
 include 'micro-service-cloud-eureka-7002'
 include 'micro-service-cloud-eureka-7003'
 include 'micro-service-cloud-department-consumer'
+include 'micro-service-cloud-department-consumer-feign'
 
