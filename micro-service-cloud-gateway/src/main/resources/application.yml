@@ -1,0 +1,33 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: microServiceGateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #默认值为 true，即默认开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+      - id: department_provider_list_route
+#        uri: http://localhost:8001
+        uri: lb://DEPARTMENTPROVIDER #根据服务注册中心中维护的服务列表作为路径进行动态路由转发
+        predicates:
+        - Path= /departments
+        - Method= GET
+      - id: department_provider_get_one_route
+        uri: lb://DEPARTMENTPROVIDER
+        predicates:
+          - Path= /**
+        filters:
+          - PrefixPath= /departments
+
+eureka:
+  instance:
+    instance-id: micro-service-cloud-gateway-9527
+    hostname: micro-service-cloud-gateway
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
