@@ -9,4 +9,5 @@ include 'micro-service-cloud-eureka-7003'
 include 'micro-service-cloud-department-consumer'
 include 'micro-service-cloud-department-consumer-feign'
 include 'micro-service-cloud-gateway'
+include 'micro-service-cloud-config-center'
 
