@@ -10,6 +10,17 @@ spring:
           uri: https://github.com/ChengmingFan/spring-cloud-config-demo.git
           force-pull: true
           default-label: main
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: fan
+    password: password
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'busrefresh'
 
 eureka:
   client: #将客户端注册到 eureka 服务列表内

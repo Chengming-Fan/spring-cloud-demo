@@ -1,18 +1,14 @@
-package com.fan.config;
+package com.fan.config.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
- * Created by Chengming Fan on 2023/5/21 22:43
+ * Created by Chengming Fan on 2023/5/22 09:48
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableConfigServer
-@RefreshScope
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

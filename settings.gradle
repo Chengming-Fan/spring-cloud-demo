@@ -10,5 +10,6 @@ include 'micro-service-cloud-department-consumer'
 include 'micro-service-cloud-department-consumer-feign'
 include 'micro-service-cloud-gateway'
 include 'micro-service-cloud-config-center'
-include 'micro-service-cloud-config-client'
+include 'micro-service-cloud-config-client-3355'
+include 'micro-service-cloud-config-client-3366'
 
